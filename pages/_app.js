@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
 
       <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
 
-      <Script strategy="lazyOnload">
+      <Script id="GoogleAnalyticsScript" strategy="lazyOnload">
           {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
               });
           `}
       </Script>
-      
+
       <Head>
         <title>Lucas Ribeiro</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
